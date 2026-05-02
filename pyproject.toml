@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opencode-session-namer"
+version = "0.1.0"
+description = "Intelligent session naming for OpenCode using local LLMs"
+readme = "README.md"
+authors = [
+    {name = "OpenCode Community", email = "community@opencode.ai"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+keywords = ["opencode", "llama.cpp", "session", "naming", "llm"]
+dependencies = [
+    "requests>=2.28.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/opencode-session-namer"
+Repository = "https://github.com/yourusername/opencode-session-namer"
+Issues = "https://github.com/yourusername/opencode-session-namer/issues"
+
+[project.scripts]
+opencode-session-namer = "src.opencode_session_namer:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
