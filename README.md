@@ -168,4 +168,25 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ---
 
-Made with ❤️ for the OpenCode community
+## 🚀 Pushing to GitHub
+
+### Using the Helper Script
+```bash
+# Make the script executable
+chmod +x push-to-github.sh
+
+# Run the interactive push helper
+./push-to-github.sh
+```
+
+### Manual Push
+```bash
+# Create repository on GitHub (https://github.com/new)
+# Name: opencode-session-namer
+# Don't initialize with README, .gitignore, or license
+
+# Add remote and push
+git remote add origin https://github.com/yourusername/opencode-session-namer.git
+git branch -M main
+git push -u origin main
+```
